@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Luie R. Almodovar — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+    <header class="hidden">
+      <h1>👋 Hi, I'm <span>John Luie R. Almodovar</span></h1>
+      <p>Aspiring Software & Embedded Systems Engineer — Web, IoT, Data</p>
+    </header>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="hidden">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computer Engineering student at NU Fairview specializing in web
+        development, embedded systems (Arduino), and data visualization. I enjoy
+        building practical prototypes and full-stack dashboards that make data
+        useful.
+      </p>
+      <img src="profile.jpg" alt="Profile Photo" />
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="hidden">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- ✅ Project 1: BAFEMIS Dashboard -->
+        <div class="project-card">
+          <img src="images/bafemis.png" alt="BAFEMIS Dashboard" />
+          <h3>BAFEMIS Dashboard</h3>
+          <p>
+            A Yii2 + Chart.js based analytics system for property management. It
+            provides interactive dashboards, data visualization, and filtering
+            options to help organizations track, analyze, and manage resources
+            efficiently.
+          </p>
+          <a href="https://github.com/yourusername/bafemis" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <!-- ✅ Project 2: Capstone -->
+        <div class="project-card">
+          <img src="images/capstone.png" alt="Smart Food Container" />
+          <h3>Smart Food Container (Capstone)</h3>
+          <p>
+            A sensor-driven food container with preservation modes for frozen
+            goods and fresh produce. Features include temperature and ethylene
+            monitoring, IoT-based controls, and smart alerts to extend shelf
+            life, ensure food safety, and reduce waste.
+          </p>
+          <a href="https://github.com/yourusername/capstone" target="_blank"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="hidden">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      </p>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>
+        © <span id="year"></span> John Luie R. Almodovar. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

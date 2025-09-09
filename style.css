@@ -1,0 +1,94 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===== Navigation ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+}
+nav.glow {
+  box-shadow: 0 0 20px #fff;
+}
+
+/* ===== Header ===== */
+header {
+  padding: 120px 20px 60px;
+}
+header h1 span {
+  color: #0ff; /* Highlighted name */
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+section img {
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* ===== Projects ===== */
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.project-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #0ff;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 20px;
+  background: #111;
+}
+
+/* ===== Animation Styles ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

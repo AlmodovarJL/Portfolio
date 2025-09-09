@@ -118,6 +118,26 @@ section img:hover {
   box-shadow: 0 0 25px #0ff;
 }
 
+/* ===== Project "View Project" Buttons ===== */
+.project-card a.view-project {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #0ff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0ff;
+}
+.project-card a.view-project:hover {
+  background: #06f;
+  color: #fff;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+  transform: scale(1.05);
+}
+
 /* ===== Footer ===== */
 footer {
   padding: 25px;
@@ -126,14 +146,15 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
-footer a {
+footer a.contact-link {
   color: #0ff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-footer a:hover {
+footer a.contact-link:hover {
   color: #fff;
-  text-shadow: 0 0 10px #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
 /* ===== Animation Styles ===== */

@@ -1,11 +1,12 @@
 /* ===== Global Styles ===== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000; /* Black background */
-  color: #fff; /* White text */
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #000000, #111111);
+  color: #fff;
   line-height: 1.6;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 /* ===== Navigation ===== */
@@ -13,46 +14,60 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.85);
   text-align: center;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 nav a {
   color: #fff;
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease;
 }
 nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transform: scale(1.1);
 }
 nav.glow {
-  box-shadow: 0 0 20px #fff;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
 }
 
 /* ===== Header ===== */
 header {
-  padding: 120px 20px 60px;
+  padding: 150px 20px 80px;
+  background: radial-gradient(circle at center, #0ff1, transparent 70%);
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 header h1 span {
-  color: #0ff; /* Highlighted name */
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  color: #0ff;
+  text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
 }
 
 /* ===== Sections ===== */
 section {
   padding: 80px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 section img {
   width: 180px;
+  max-width: 50%;
   border-radius: 50%;
   margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #0ff;
 }
 
 /* ===== Projects ===== */
@@ -60,26 +75,41 @@ section img {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 20px 0;
 }
 .project-card {
   background: #111;
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .project-card img {
   width: 100%;
   border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #0ff;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 25px #0ff;
 }
 
 /* ===== Footer ===== */
 footer {
-  padding: 20px;
+  padding: 25px;
   background: #111;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+footer a {
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
 }
 
 /* ===== Animation Styles ===== */
@@ -91,4 +121,37 @@ footer {
 .show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== Button Styles ===== */
+button {
+  background: #0ff;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0ff;
+}
+button:hover {
+  background: #0ff;
+  color: #fff;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Improvements ===== */
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  section img {
+    width: 140px;
+  }
 }
